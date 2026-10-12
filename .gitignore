@@ -1,0 +1,10 @@
+literature/pdfs/
+data/raw/private/
+data/raw/downloads/
+data/results/
+.env
+.env.*
+!*.example
+__pycache__/
+*.pyc
+.DS_Store

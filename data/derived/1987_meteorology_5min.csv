@@ -1,0 +1,7 @@
+date,interval_start_reported,interval_end_reported,wind_direction_deg_true_north,wind_speed_m_s_at_0p9m,pasquill_class,roughness_height_cm
+1987-06-10,15:20,15:25,301,2.3,B,2.8
+1987-06-10,15:25,15:30,264,1.7,B,1.6
+1987-06-10,15:30,15:35,285,2.8,C,3.4
+1987-06-10,15:35,15:40,289,2.7,C,4.0
+1987-06-10,15:40,15:45,280,2.2,C,2.7
+1987-06-10,15:45,15:50,268,1.9,C,2.9
