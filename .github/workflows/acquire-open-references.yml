@@ -69,7 +69,10 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add experiments/prairie-grass/data/raw/open experiments/kincaid/data/raw/open experiments/joint-urban-2003/data/raw/open sources/open_binary_action_receipt.json 2>/dev/null || true
+          git add -A experiments/prairie-grass/data/raw/open experiments/kincaid/data/raw/open sources/open_binary_action_receipt.json
+          if test -d experiments/joint-urban-2003/data/raw/open; then
+            git add -A experiments/joint-urban-2003/data/raw/open
+          fi
           if git diff --cached --quiet; then
             echo "No source binaries could be acquired."
             exit 0
