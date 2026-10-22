@@ -1,0 +1,11 @@
+experiment_id,period,source_species,release_type,chapter3_role,chapter4_role,entry_url,evidence_status,raw_observations_in_repo,priority,blocker
+chalk-river-1986,1986,HT,short release,soil oxidation and reemission,interface reference,https://pubmed.ncbi.nlm.nih.gov/2298573/,SOURCE_IDENTIFIED,no,P1,source and sampler original missing
+chalk-river-1987,1987,HT,30min release,HT plume and reemission,soil-air transient coupling,https://jopss.jaea.go.jp/pdfdata/JAERI-M-88-232.pdf,TABLE_TRANSCRIBED_PARTIAL,met six rows only,P0,complete concentrations and geometry missing
+chalk-river-1994,1994,HT,12day chronic release,soil vegetation dynamics,soil plant TFWT OBT,https://jopss.jaea.go.jp/pdfdata/JAERI-Data-Code-99-022.pdf,SOURCE_IDENTIFIED,no,P0,8.8 versus 13 TBq conflict and observations not extracted
+canada-hto-1992,1992,HTO,ambient contaminated surfaces,interface parameter review,air-soil bidirectional flux,https://jopss.jaea.go.jp/pdfdata/JAERI-M-94-065.pdf,SOURCE_IDENTIFIED,no,P0,measured versus derived flux pending
+kincaid,1980-1981,SF6 and SO2,elevated buoyant plume,elevated puff model,optional CFD elevated case,https://www.epa.gov/scram/air-quality-dispersion-modeling-preferred-and-recommended-models,ARCHIVE_LINK_VERIFIED,no,P0,archive uninspected
+prairie-grass,1956,SO2,near-ground 10min releases,near-field plume,flat ABL scalar CFD baseline,https://harmo.org/jsirwin/PGrassVolumeI.pdf,ARCHIVE_LINK_VERIFIED,no,P0,archive uninspected
+must,2001,propylene,continuous and puff,optional urban checks,container-array URANS,https://journals.ametsoc.org/view/journals/apme/45/10/jam2410.1.xml,SOURCE_IDENTIFIED,no,P0,raw trial access unconfirmed
+joint-urban-2003,2003,SF6,continuous and puff,optional urban,real-city dynamic flow,https://repository.library.noaa.gov/view/noaa/12573,SOURCE_IDENTIFIED,no,P1,legacy data archive uncertain
+copenhagen,1978-1979,SF6,elevated nonbuoyant,abl and elevated transport,optional nonneutral CFD,https://orbit.dtu.dk/en/publications/the-copenhagen-tracer-experiments-reporting-of-measurements/,SOURCE_IDENTIFIED,no,P1,report numerical ingestion pending
+hanford,1959-1973,varied including ZnS,multiple series,independent plume trials,optional multi-height CFD,https://digital.library.unt.edu/ark:/67531/metadc1074412/,SOURCE_IDENTIFIED,no,P2,choose one trial before validation

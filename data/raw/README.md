@@ -1,3 +1,5 @@
-# Original observation files — not acquired
+# Raw data policy
 
-Raw data must come lawfully from authors, institution archives, or an explicitly licensed dataset. Register SHA-256, source URL, acquisition time, owner and redistribution terms, measurement methods and provenance before committing. Do not invent CSVs to enable a model run. Publisher PDFs remain linked from `literature/README.md`, not mirrored here.
+Original experimental observations are **not currently stored** in this global directory. Prefer experiment-specific `experiments/<id>/data/raw/` with explicit redistribution permission, SHA-256 and immutable original bytes. `literature/` and `sources/` list publicly accessible publisher/institution PDFs/ZIPs, but a link is not a downloaded or licensed dataset.
+
+Restricted raw files, private author correspondence or journal PDFs must not be copied into this public repository without explicit rights review. Never fabricate surrogate “raw” measurements.

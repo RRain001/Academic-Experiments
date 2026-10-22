@@ -1,13 +1,22 @@
-# Evidence gates / 验收定义
+# 统一数据与科学验证验收门槛
 
-| Gate | Requirement | Current status |
+**进度标签（不得跳级）**：
+
+| Level | 证据门槛 | 验收含义 |
 |---|---|---|
-| L0 | Primary papers/reports and citation links identified | YES (1986/87/94) |
-| L1 | Source/meteorology/sampling geometry and all time conventions independently confirmed | NO |
-| L2 | Machine-readable observed concentrations, times, units, detection limits and uncertainty from rights-checked sources | NO (1987 has only 6 met rows) |
-| L3 | Reproducible solver configuration, input hashes, conservation and numerical tests | NO |
-| L4 | Independent observational comparison with predeclared thresholds and uncertainty | NO |
+| L0 `SOURCE_IDENTIFIED` | 官方论文 / 数据报告 / 档案 URL 已定位、可追溯 | **非**数据入库 |
+| L1 `SOURCE_CHARACTERIZED` | 精确子试验、源项、几何/气象/时间、测量定义、来源页表与冲突项核对 | 可设计 case，未必可运行 |
+| L2 `DATA_QC` | 合法取得、hash、机器可读数值、单位/时间/空间和检测限复核、缺测标识 | 数据科学可用 |
+| L3 `BENCHMARK_READY` | 完整独立观测输入、留出试验、数值方案/守恒基线、确定先验阈值 | 能公平开展模型验证 |
+| L4 `EXPERIMENTALLY_VALIDATED` | 已实际运行模型，满足预先设定指标与不确定度标准，有可复现结果 | 仅对应**指定物理/案例范围**的 PASS |
 
-For comparisons, candidate metrics: `FB = 2(mean(P)-mean(O))/(mean(P)+mean(O))`, `NMSE = mean((P-O)^2)/(mean(P)*mean(O))`, `FAC2 = fraction(0.5<=P/O<=2)` for positive comparable concentrations, plus peak/time-integral error, plant trajectories and mass budgets. **These metrics are not pass thresholds**; define tolerances before inspecting simulation results. Guard zero denominators, censored observations, time alignments and sampling basis. Do not use model-to-model parity as proof of field validity.
+**2026-10-22 状态**：所有实验均 **未达到 L3/L4**。Chalk River 1987 只有 6 行逐表转录的气象记录，不是完整 case。Kincaid/Prairie Grass 有 ZIP 链接，但未审计包内数据。1994 尚有源项冲突。
 
-1987: L0 + partial manually transcribed source table. 1994: L0 + **release activity blocker**. Model validation outcomes remain **NOT PERFORMED**.
+## 最小分析指标
+- 大气标量：`FB = 2(mean(P)-mean(O))/(mean(P)+mean(O))`；`NMSE = mean((P-O)^2)/(mean(P)*mean(O))`；`FAC2` = 正浓度样本中 `0.5 <= P/O <= 2` 比例；可增加峰值、积分浓度与到达时刻。零值、检测限、背景和配对时间窗单独处理。
+- URANS：网格与时间步独立、边界剖面/温度对照、收敛、采样窗平均；本征湍流波动不可要求 URANS 逐点复现。
+- 跨介质：空气/土壤界面活度守恒、土壤/植物库存、初末状态和源汇积分一致；数值残差需事先定义阈值。
+- 植物：TFWT/OBT 时序、组织/干重/鲜重/水分基准一致，校准集与独立测试集分开。
+- 食物链剂量：使用独立参数依据与完整暴露路径，缺失即标明 `NOT_VALIDATED`。
+
+**不预置任意“优秀”的经验阈值**，由论文研究设计和每个实验的误差特征事先冻结。软件 PASS、模型互比 PASS 不能替代 L4。
