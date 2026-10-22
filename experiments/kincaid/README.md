@@ -17,3 +17,5 @@
 ## EPA 官方 ZIP 直链
 
 [Kincaid SF₆（kinsf6.zip）](https://gaftp.epa.gov/Air/aqmg/SCRAM/models/preferred/aermod/eval_databases/kinsf6.zip) · [Kincaid SO₂（kinso2.zip）](https://gaftp.epa.gov/Air/aqmg/SCRAM/models/preferred/aermod/eval_databases/kinso2.zip)。为 EPA 官方模型评估输入/输出包，需在下载后辨识实测观测、模型中间量和输出；**当前未入库**。
+
+**实际入库更新：** [SF₆ ZIP（3,129,058 bytes）](data/raw/open/kinsf6.zip) 和 [SO₂ ZIP（5,652,319 bytes）](data/raw/open/kinso2.zip) 已由 GitHub Actions 下载并做 ZIP CRC + SHA-256 校验，分别含 **375 和 39 条目**。仍需区分现场测量、气象预处理与 AERMOD 产物。

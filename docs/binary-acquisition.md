@@ -2,7 +2,7 @@
 
 **重要发现：** GitHub API 复核 `RRain001/Academic-Experiments` 当前为 **PUBLIC**。此前误认为私有仓库的说法不成立。公开仓库不应直接复制没有再分发许可的第三方原文。
 
-**本次已完成的工作**：对外部来源重新核实、明确直链、将 NOAA 档案官方 SHA-256 与许可状态登记至 [binary_sources.json](../sources/binary_sources.json)，建立可在有互联网的本机或 CI 环境运行的 [下载+校验脚本](../scripts/fetch_reference_materials.py)。**本次执行环境对外部二进制服务器下载失败，因此尚未在模型工作区取得 PDF/ZIP 实物，也没有计算出新的文件哈希；除 NOAA 官网已公布的 SHA-256 外，任何哈希均不得视为已获得。**
+**本次已完成的工作**：对外部来源重新核实、明确直链、将 NOAA 档案官方 SHA-256 与许可状态登记至 [binary_sources.json](../sources/binary_sources.json)，建立可在有互联网的本机或 CI 环境运行的 [下载+校验脚本](../scripts/fetch_reference_materials.py)。**结果更新（2026-10-22）**：本地工作容器对外部服务器下载失败，但 GitHub Actions 已通过官方 EPA 站点获取并验证 **3 份 ZIP**，且将实际文件与计算出的 SHA-256 提交到 GitHub 分支。NOAA JU2003 下载返回 HTTP 403；JAEA、MUST 和 Copenhagen 未向公开仓库镜像。参见 [验收清单](../sources/binary-acquisition-results.md)。
 
 ## 各来源的访问与授权
 
@@ -37,6 +37,6 @@ python3 scripts/fetch_reference_materials.py --id chalk-river-1994-database --ac
 
 下载内容会放在被 `.gitignore` 忽略的 `.cache/reference_materials/<experiment>/`。会检查 PDF 头、ZIP 完整性、SHA256；NOAA 报告额外与原始馆藏公布值比较。运行结果存在相邻 `*.acquisition.json`。脚本**不会自动提交、推送或分发**。
 
-只有真正下载并通过检查后才能将仓库台账从 `LINK_VERIFIED` 更新到 `FILE_ACQUIRED`。下载报告 != 已得到机器可读观测数据；仍需数值提取、时空和单位核对后才可用于 CFD 校验。
+这次 EPA 三份 ZIP 已经从 `LINK_VERIFIED` 升级为 `FILE_ACQUIRED_WITH_SHA256`；其他资料保持相应状态。下载报告 != 已得到机器可读观测数据；仍需数值提取、时空和单位核对后才可用于 CFD 校验。
 
 如果需要将 JAEA / Copenhagen 正文上传 **GitHub 私有仓库**，应先将当前仓库设置为 Private，并核实许可与使用范围；本次不自动修改用户仓库隐私设置。
