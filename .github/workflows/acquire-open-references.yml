@@ -1,0 +1,81 @@
+name: Acquire open field-study references
+
+on:
+  push:
+    branches:
+      - docs/source-download-verification-20261022
+    paths:
+      - .github/workflows/acquire-open-references.yml
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  acquire:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+      - name: Download and verify source archives
+        run: |
+          set +e
+          python3 scripts/fetch_reference_materials.py --id prairie-grass-epa --id kincaid-sf6-epa --id kincaid-so2-epa --id joint-urban-2003-noaa
+          echo "Verification script completed; individual status files will be reviewed."
+          exit 0
+      - name: Publish only eligible and verified public reference binaries
+        run: |
+          python3 - <<'PY'
+          import json,hashlib,shutil
+          from pathlib import Path
+          root=Path('.')
+          registry=json.loads((root/'sources/binary_sources.json').read_text())['items']
+          allowed={'prairie-grass-epa','kincaid-sf6-epa','kincaid-so2-epa','joint-urban-2003-noaa'}
+          acquired=[]
+          for item in registry:
+              if item['id'] not in allowed:
+                  continue
+              p=root/'.cache/reference_materials'/item['experiment']/item['filename']
+              status=p.with_name(p.name+'.acquisition.json')
+              if not (p.is_file() and status.is_file()):
+                  print('UNAVAILABLE:',item['id']); continue
+              result=json.loads(status.read_text())
+              if result.get('status') not in {'DOWNLOADED_AND_VERIFIED','ALREADY_PRESENT_VERIFIED'}:
+                  print('FAILED:',item['id'],result.get('error')); continue
+              if item['id']=='joint-urban-2003-noaa' and result['sha256']!=item['expected_sha256']:
+                  raise SystemExit('NOAA checksum mismatch')
+              dest=root/'experiments'/item['experiment']/'data/raw/open'/item['filename']
+              dest.parent.mkdir(parents=True,exist_ok=True)
+              shutil.copyfile(p,dest)
+              dest.with_name(dest.name+'.source.json').write_text(json.dumps({
+                  'source_url':item['url'],
+                  'source_page':item['source_page'],
+                  'source':item['source'],
+                  'sha256':result['sha256'],
+                  'size_bytes':dest.stat().st_size,
+                  'verification':result,
+                  'rights_record':item['rights'],
+                  'warning':'Official evaluation ZIP may contain model inputs/outputs; not all records are experimental observations.'
+              },indent=2)+'\n')
+              acquired.append(str(dest))
+          print('ACQUIRED:',len(acquired))
+          (root/'sources/open_binary_action_receipt.json').write_text(json.dumps({
+              'acquired_files':acquired,'unavailable':[i['id'] for i in registry if i['id'] in allowed and not any(i['filename'] in x for x in acquired)]
+          },indent=2)+'\n')
+          PY
+      - name: Commit source-verified open data back to branch
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A experiments/prairie-grass/data/raw/open experiments/kincaid/data/raw/open sources/open_binary_action_receipt.json
+          if test -d experiments/joint-urban-2003/data/raw/open; then
+            git add -A experiments/joint-urban-2003/data/raw/open
+          fi
+          if git diff --cached --quiet; then
+            echo "No source binaries could be acquired."
+            exit 0
+          fi
+          git commit -m "data: archive verified open EPA and NOAA reference files"
+          git push

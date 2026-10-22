@@ -16,3 +16,7 @@
 4. 不将丙烯结果用于论证 HT/HTO 传质、OBT 或人体剂量。
 
 **数据状态**：试验与论文档案已找到；完整原始机器可读试验集及获取许可仍需确认，L0。
+
+## 2026-10-22 权利状态补充
+
+**原 2001 MUST Customer Report 封面写有 `Distribution authorized to U.S. government agencies only; other requests ... Defense Threat Reduction Agency`。** 已公开出现 PDF 不代表允许公开 GitHub 重新分发；当前公开仓库只登记 DOI/直链和实验概要，若要进一步拿到完整试验数据库应联系授权机构。资料获取脚本不自动下载这份受限报告。

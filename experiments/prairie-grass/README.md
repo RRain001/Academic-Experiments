@@ -13,3 +13,9 @@
 - 注意 SO₂ 存在反应和地表吸收的潜在影响；选择数据集时审查有无沉积校正，不能擅自当作严格惰性。
 
 **数据状态**：官方/归档报告和 EPA ZIP 入口已确认；尚未审计原始采样窗与浓度表，L0。
+
+## EPA 官方数据压缩包的直接下载地址
+
+[Prairie Grass ZIP（pgrass.zip）](https://gaftp.epa.gov/Air/aqmg/SCRAM/models/preferred/aermod/eval_databases/pgrass.zip)，为 US EPA SCRAM 模型评估数据集（官方页面 342 KB），包含模型输入/输出，不应未经辨识直接把模型输出认定为现场观测。此处**只有 verified URL，实际 ZIP 和散列值尚未获得**。
+
+**实际入库更新：** [pgrass.zip（350,105 bytes）](data/raw/open/pgrass.zip) 已由 GitHub Actions 下载、ZIP CRC 校验和 SHA-256 校验，含 **26 条目**，混有 AERMET/AERMOD 输入输出，观测字段尚待独立区分。

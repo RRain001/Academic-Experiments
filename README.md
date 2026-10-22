@@ -47,3 +47,15 @@ data/{README.md,raw/README.md}
 
 ## 版权与研究诚信
 外部实验原始 PDF/受限数据只登记官方页面；获许可方可入库，记录 SHA256、版本、坐标、单位、时间区间、检测限与来源页码。**公开可读 ≠ 可再分发**。不得捏造观测、时间、源项或 PASS。更多约束见 [AGENTS.md](AGENTS.md)。
+
+## 外部原始资料的实际下载状态
+
+[逐份直链核实、版权风险和下载校验脚本](docs/binary-acquisition.md) · [来源机器清单](sources/binary_sources.json) · [Python 获取脚本](scripts/fetch_reference_materials.py)。**本库当前是公开仓库；不能将仅有官方直链误写成文件已经归档。**
+
+## 2026-10-22 已真实入库的 EPA 数据文件
+
+- [Prairie Grass — pgrass.zip](experiments/prairie-grass/data/raw/open/pgrass.zip)（350,105 bytes）
+- [Kincaid SF₆ — kinsf6.zip](experiments/kincaid/data/raw/open/kinsf6.zip)（3,129,058 bytes）
+- [Kincaid SO₂ — kinso2.zip](experiments/kincaid/data/raw/open/kinso2.zip)（5,652,319 bytes）
+
+三个文件均经官方 EPA 下载、ZIP 全部成员 CRC 验证、SHA-256 记录和实际 GitHub 提交。参见 [文件验收清单](sources/binary-acquisition-results.md)。NOAA 官方 PDF 下载遇 HTTP 403；JAEA/Copenhagen/MUST 暂不公开镜像。

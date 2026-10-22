@@ -1,0 +1,41 @@
+{
+  "source_url": "https://gaftp.epa.gov/Air/aqmg/SCRAM/models/preferred/aermod/eval_databases/kinsf6.zip",
+  "source_page": "https://www.epa.gov/scram/air-quality-dispersion-modeling-preferred-and-recommended-models",
+  "source": "US EPA SCRAM",
+  "sha256": "8b645ac7c4dbbc126a315124d4bf7bb8863077b25f06155bca17bc00d2445470",
+  "size_bytes": 3129058,
+  "verification": {
+    "id": "kincaid-sf6-epa",
+    "source": "https://gaftp.epa.gov/Air/aqmg/SCRAM/models/preferred/aermod/eval_databases/kinsf6.zip",
+    "checked_utc": "2026-10-22T11:39:54.170448+00:00",
+    "status": "DOWNLOADED_AND_VERIFIED",
+    "sha256": "8b645ac7c4dbbc126a315124d4bf7bb8863077b25f06155bca17bc00d2445470",
+    "size_bytes": 3129058,
+    "type": "zip",
+    "members": 375,
+    "sample_names": [
+      "AERMET/",
+      "AERMET/kinprof1.sf6",
+      "AERMET/kinprof2.sf6",
+      "AERMET/kinprof3.sf6",
+      "AERMET/kinsurf1.sf6",
+      "AERMET/kinsurf2.sf6",
+      "AERMET/kinsurf3.sf6",
+      "AERMET/KS2AERMT.PFL",
+      "AERMET/KS2AERMT.SFC",
+      "AERMET/NOTE.TXT",
+      "AERMOD/",
+      "AERMOD/KINHEMI2.SF6",
+      "AERMOD/KINHEMI3.SF6",
+      "AERMOD/KINHEMIS.SF6",
+      "AERMOD/kinprof1.sf6",
+      "AERMOD/kinprof2.sf6",
+      "AERMOD/kinprof3.sf6",
+      "AERMOD/kinsurf1.sf6",
+      "AERMOD/kinsurf2.sf6",
+      "AERMOD/kinsurf3.sf6"
+    ]
+  },
+  "rights_record": "EPA-produced data ordinarily US public domain, check archive metadata for third-party input",
+  "warning": "Official evaluation ZIP may contain model inputs/outputs; not all records are experimental observations."
+}

@@ -1,0 +1,41 @@
+{
+  "source_url": "https://gaftp.epa.gov/Air/aqmg/SCRAM/models/preferred/aermod/eval_databases/pgrass.zip",
+  "source_page": "https://www.epa.gov/scram/air-quality-dispersion-modeling-preferred-and-recommended-models",
+  "source": "US EPA SCRAM",
+  "sha256": "0f97645619b8fe6a54e27f1b8671817b2eb42040323e2165ceab4e5ac89535db",
+  "size_bytes": 350105,
+  "verification": {
+    "id": "prairie-grass-epa",
+    "source": "https://gaftp.epa.gov/Air/aqmg/SCRAM/models/preferred/aermod/eval_databases/pgrass.zip",
+    "checked_utc": "2026-10-22T11:39:53.298278+00:00",
+    "status": "DOWNLOADED_AND_VERIFIED",
+    "sha256": "0f97645619b8fe6a54e27f1b8671817b2eb42040323e2165ceab4e5ac89535db",
+    "size_bytes": 350105,
+    "type": "zip",
+    "members": 26,
+    "sample_names": [
+      "AERMET/",
+      "AERMET/24023-56.FSL",
+      "AERMET/nospecob.sfc",
+      "AERMET/NOTE.TXT",
+      "AERMET/PG.DAT",
+      "AERMET/pgrprof.222",
+      "AERMET/PGRSTAG2.INP",
+      "AERMET/PGRSTAG3.INP",
+      "AERMET/PGRSURF.222",
+      "AERMET/PGR_OS.MET",
+      "AERMET/PGR_ST1.INP",
+      "AERMET/PGSFEXCC.NEW",
+      "AERMOD/",
+      "AERMOD/PGRASS.EVL",
+      "AERMOD/PGRASS.INP",
+      "AERMOD/PGRASS.OUT",
+      "AERMOD/PGRASS.RNK",
+      "AERMOD/PGRASS01.PST",
+      "AERMOD/PGRHEMIS.DAT",
+      "ISCST3/"
+    ]
+  },
+  "rights_record": "EPA-produced data ordinarily US public domain, check archive metadata for third-party input",
+  "warning": "Official evaluation ZIP may contain model inputs/outputs; not all records are experimental observations."
+}

@@ -1,0 +1,41 @@
+{
+  "source_url": "https://gaftp.epa.gov/Air/aqmg/SCRAM/models/preferred/aermod/eval_databases/kinso2.zip",
+  "source_page": "https://www.epa.gov/scram/air-quality-dispersion-modeling-preferred-and-recommended-models",
+  "source": "US EPA SCRAM",
+  "sha256": "5ad6ed75891da9b6751b20e54652ae6026ac4131092ef2aee56aa91bcf7afe36",
+  "size_bytes": 5652319,
+  "verification": {
+    "id": "kincaid-so2-epa",
+    "source": "https://gaftp.epa.gov/Air/aqmg/SCRAM/models/preferred/aermod/eval_databases/kinso2.zip",
+    "checked_utc": "2026-10-22T11:39:59.514290+00:00",
+    "status": "DOWNLOADED_AND_VERIFIED",
+    "sha256": "5ad6ed75891da9b6751b20e54652ae6026ac4131092ef2aee56aa91bcf7afe36",
+    "size_bytes": 5652319,
+    "type": "zip",
+    "members": 39,
+    "sample_names": [
+      "AERMET/",
+      "AERMET/14842-80.FSL",
+      "AERMET/93822-80.SAM",
+      "AERMET/KB6061.DAT",
+      "AERMET/KS2AERMA.PFL",
+      "AERMET/KS2AERMA.SFC",
+      "AERMET/KS2AERMB.PFL",
+      "AERMET/KS2AERMB.SFC",
+      "AERMET/KS2AERMT.PFL",
+      "AERMET/KS2AERMT.SFC",
+      "AERMET/KS2OSITE.MET",
+      "AERMET/KS2_ST1.INP",
+      "AERMET/KS2_ST2.INP",
+      "AERMET/KS2_ST3A.INP",
+      "AERMET/KS2_ST3B.INP",
+      "AERMOD/",
+      "AERMOD/KINHEMIS.SO2",
+      "AERMOD/KINSO2.EVL",
+      "AERMOD/KINSO2.INP",
+      "AERMOD/kinso2.out"
+    ]
+  },
+  "rights_record": "EPA-produced data ordinarily US public domain, check archive metadata for third-party input",
+  "warning": "Official evaluation ZIP may contain model inputs/outputs; not all records are experimental observations."
+}

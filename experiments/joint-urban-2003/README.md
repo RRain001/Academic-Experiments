@@ -14,3 +14,7 @@
 
 ## 前置门槛
 优先找原始城市建筑/采样坐标及观测时间窗，确认平均浓度与快响应观测分离；URANS 只与时间平均或模型可解析的过渡过程比较。
+
+## NOAA 原始 PDF 与许可核实
+
+NOAA [官方 PDF 直链](https://repository.library.noaa.gov/view/noaa/12573/noaa_12573_DS1.pdf)（馆藏标示约 61.97 MB），[馆藏资料页](https://repository.library.noaa.gov/view/noaa/12573) 明确标注 **CC0 Public Domain**，并公布 SHA-256：`78c32cc66edf3a7dfe5589c68cfee9fd4e1fed7b18f81becef351d5bea742c9e`。此为**馆藏公布的校验值**，不是本仓库实际下载重新计算值。尚未入库，避免 62 MB 普通 Git blob；适合评估 GitHub Release 等大型二进制发布方式。
