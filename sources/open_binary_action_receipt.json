@@ -1,0 +1,10 @@
+{
+  "acquired_files": [
+    "experiments/prairie-grass/data/raw/open/pgrass.zip",
+    "experiments/kincaid/data/raw/open/kinsf6.zip",
+    "experiments/kincaid/data/raw/open/kinso2.zip"
+  ],
+  "unavailable": [
+    "joint-urban-2003-noaa"
+  ]
+}
