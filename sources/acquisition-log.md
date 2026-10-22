@@ -14,3 +14,7 @@
 **状态口径**：`LINK_VERIFIED` = 已确认机构或期刊入口；`FILE_ACQUIRED` = 已合法获取文件并校验 hash；`NUMERIC_QC` = 数值化+审计；`BENCHMARK_READY` = 源项/气象/监测完整；`VALIDATED` = 独立观测比较已验收。
 
 当前除 1987 一小段转录外，**所有实验原始浓度数据均未作为本仓可复算的完备基准验收**。Chalk River 旧获取记录见 [历史台账](../experiments/chalk-river/sources/acquisition-log.md)。
+
+## 2026-10-22 外部二进制资料再核实
+
+本仓库经 GitHub API 确认为 **PUBLIC**。通过公开资料核实 EPA Prairie Grass/Kincaid 的确切 ZIP 文件、NOAA JU2003 PDF 官方 SHA-256（见 `binary_sources.json`）。JAEA 1994 和 1992 PDF 直链已登记但获取失败；MUST 2001 官方报告封面标注仅限美国政府机构分发，不自动下载镜像。**所有新 PDF/ZIP 的实际入库状态仍为 NO；也没有计算新 SHA256。** 下载脚本见 `scripts/fetch_reference_materials.py`，下载后再逐项更新台账，禁止将报告目录当作数值数据验收。

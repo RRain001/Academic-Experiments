@@ -47,3 +47,7 @@ data/{README.md,raw/README.md}
 
 ## 版权与研究诚信
 外部实验原始 PDF/受限数据只登记官方页面；获许可方可入库，记录 SHA256、版本、坐标、单位、时间区间、检测限与来源页码。**公开可读 ≠ 可再分发**。不得捏造观测、时间、源项或 PASS。更多约束见 [AGENTS.md](AGENTS.md)。
+
+## 外部原始资料的实际下载状态
+
+[逐份直链核实、版权风险和下载校验脚本](docs/binary-acquisition.md) · [来源机器清单](sources/binary_sources.json) · [Python 获取脚本](scripts/fetch_reference_materials.py)。**本库当前是公开仓库；不能将仅有官方直链误写成文件已经归档。**

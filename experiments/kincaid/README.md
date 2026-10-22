@@ -13,3 +13,7 @@
 **数据状态**：公开 ZIP 入口已核实，但 **ZIP 内具体文件、原始浓度与评价软件输出的对应关系还没有逐项审计**；不得声称已取得和解析完整观测。下一步先清点 SF₆ 源项、采样弧线、逐时风与小时平均地面浓度，采用独立留出试验日验证。
 
 **第三章**：高架浮力烟羽、峰值和弧线最大值、1h 平均浓度；不验证氚跨介质过程。
+
+## EPA 官方 ZIP 直链
+
+[Kincaid SF₆（kinsf6.zip）](https://gaftp.epa.gov/Air/aqmg/SCRAM/models/preferred/aermod/eval_databases/kinsf6.zip) · [Kincaid SO₂（kinso2.zip）](https://gaftp.epa.gov/Air/aqmg/SCRAM/models/preferred/aermod/eval_databases/kinso2.zip)。为 EPA 官方模型评估输入/输出包，需在下载后辨识实测观测、模型中间量和输出；**当前未入库**。
