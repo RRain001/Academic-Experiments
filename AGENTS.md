@@ -1,15 +1,18 @@
-# Agent guidance / 研究工作约束
+# AGENTS.md — academic field experiment evidence rules
 
-Purpose: provenance-first evidence archive for 1986/1987/1994 Chalk River **HT release** field experiments. Do not rewrite this repository as a simulation software project.
+This repository is a **bibliographic/evidence + benchmark preparation project**, not an OpenFOAM/CTEAS solver repository. Scope: Chapters 3 and 4 nuclear environmental multiphase/multimedia tritium validation, including non-tritium atmospheric tracer benchmarks.
 
-1. **HT ≠ HTO**. HT-to-soil uptake/oxidation/HTO reemission must not be replaced by an invented direct atmospheric HTO source. Never use HT dry-deposition parameters as HTO dry-deposition parameters.
-2. Every numerical claim requires primary bibliographic source (DOI/report), page/table/figure, physical units, measured/secondary/derived/assumed status, extraction method, and applicable uncertainties.
-3. Keep copyright-restricted PDFs as lawful publisher links rather than copies; never copy unpublished files from private PhD repositories.
-4. Disputed **1994 total release 8.8 TBq vs 13 TBq** is a blocker for source-normalized validation. Preserve both records; seek original experiment log.
-5. Never invent sampler coordinates, concentration observations, uncertainty, weather, soil parameters, time zones, or PASS outcomes.
-6. Separate analytical verification, code-to-code comparison, and **independent experimental validation**.
-7. For new digitized measurements retain original basis (Bq/m³ air, Bq/L water, Bq/kg dry mass), detection limits, extraction/digitization method, source permission and independent review.
-8. Publish reversible transformations with tests, hashes and run manifest; mark missing observation fields as missing (not numeric zero).
-9. Keep scope aligned to PhD fast atmosphere–soil–plant dynamic models (Chapter 3) and CFD atmosphere–soil coupling (Chapter 4). ROM experiments only after original observations and CFD baselines are sound.
+1. **Do not invent observations**: numeric activity, concentration, timestamps, sampling coordinates, emission rates, meteorology, uncertainty, test results or rights must be traceable to page/table/official archive.
+2. Distinguish `SOURCE_IDENTIFIED`, `FILE_ACQUIRED`, `TABLE_TRANSCRIBED`, `QC_PASSED`, `BENCHMARK_READY`, and `EXPERIMENTALLY_VALIDATED`; link/abstract never implies acquisition.
+3. **HT is not HTO**: soil microbial HT oxidation and secondary HTO release differ from direct HTO primary emission; SO₂ may deposit/react; SF₆ and propylene validate flow/transport only.
+4. Keep original/referenced evidence immutable. Preserve Chalk River 1994 **8.8 vs 13 TBq** conflict until original source logs resolve it; do not silently adopt either.
+5. Treat 1992 Canadian HTO field observations as an **independent environmental study**, including Chalk River/Pickering sites, not automatically a controlled source trial.
+6. Separate observations, transcriptions, synthetic tests, solver outputs and parameter-fitted subsets; no calibration/test leakage. Model–model parity ≠ field validation.
+7. Ingest case requires source geometry/rate and uncertainties, sampling coordinates/time windows, wind conventions and time zone, topography/roughness, applicable chemistry/deposition assumptions, QC/rights and SHA256. If critical input missing, fail closed.
+8. For CFD, report URANS closure, boundary meteorology, mesh/time-step independence, field initialization, concentration windowing, tracer mass and air–soil interface conservation. Compare URANS means with averaging-compatible observations, not individual turbulent spikes.
+9. Keep primary DOI/publisher and official government/institution archive links; do not commit copied journal PDFs without redistribution permission.
+10. Changes to literature indexes and datasets require provenance, auditable file status, date and a concise updated issue/roadmap entry. Don't delete original Chalk River context.
+11. User's fourth chapter priority is integrated atmosphere–soil–plant–food-chain dynamics, not a WRF vs CALMET driver contest. Meteorology can come from suitably verified observation-based ABL boundary conditions.
+12. No model result may be labeled PASS until independent experimental observations and predeclared quantitative acceptance criteria have been tested.
 
-Evidence labels: VERIFIED_PRIMARY, SECONDARY_REPORTED, DERIVED, UNRESOLVED, NOT_AVAILABLE. Current repository is **literature-identified + limited meteorological table**, not a finished benchmark dataset.
+Navigation: [README](README.md) · [validation matrix](validation/matrix.md) · [plan](validation/roadmap.md) · [catalog](sources/catalog.csv).

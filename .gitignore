@@ -1,7 +1,9 @@
-literature/pdfs/
-data/raw/private/
-data/raw/downloads/
-data/results/
+# Copyright-restricted copies: retain bibliographic URLs rather than mirroring PDFs
+**/literature/pdfs/
+# Private/raw unlicensed acquisitions must not enter public Git history
+**/data/raw/private/
+**/data/raw/downloads/
+**/results/
 .env
 .env.*
 !*.example
